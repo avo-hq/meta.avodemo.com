@@ -7,3 +7,11 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+20.times do
+  Post.create!(
+    name: Faker::Quote.famous_last_words,
+    body: Faker::Lorem.paragraphs(number: rand(4...10)).join("\n"),
+    published_at: Time.now - rand(10...365).days
+  )
+end
