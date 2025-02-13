@@ -10,6 +10,8 @@ class Avo::Resources::Post < Avo::BaseResource
     field :name, as: :text
     field :body, as: :textarea
     field :published_at, as: :date_time
+
+    meta_panel
   end
 end
 

@@ -66,3 +66,5 @@ gem "avo", ">= 3.2"
 gem "faker", "~> 3.5"
 
 gem "whenever", "~> 1.0"
+gem "avo-meta", source: "https://packager.dev/avo-hq/"
+gem "store_model"
