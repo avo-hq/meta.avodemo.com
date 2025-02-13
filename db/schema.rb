@@ -10,12 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_02_06_124620) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_13_144713) do
+  create_table "avo_meta_schemas", force: :cascade do |t|
+    t.string "resource_name"
+    t.json "schema_entries"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["resource_name"], name: "index_avo_meta_schemas_on_resource_name", unique: true
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "name"
     t.text "body"
     t.datetime "published_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.json "meta"
   end
 end
